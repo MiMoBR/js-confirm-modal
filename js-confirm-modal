@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <style>
+		#confirm {
+			display: none;
+			background-color:#fff;
+			border: 1px solid #cccc;
+			position: fixed;
+			width: 20rem;
+			height: 8rem;
+			padding: 1rem;
+			box-sizing: border-box;
+		}
+		.boxConfirm{
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+		}
+		.message{
+			display: flex;
+			justify-content: center;
+		}
+		.rowBtn{
+			display: flex;
+			justify-content: space-around;
+		}
+      </style>
+</head>
+<body>
+      <div id="confirm">
+      	<div class="boxConfirm">
+			<div class="message">
+				<p>Deseja eleminar a data?</p>
+			</div>
+			<div class="rowBtn">
+				<a class="btn" onclick="confirmFcn('y')">Sim</a>
+				<a class="btn" onclick="confirmFcn('y')">Não</a>				
+			</div>      		
+      	</div>
+      </div>
+
+      <a onclick="functionConfirm()">Clique Aqui</a>
+
+      <script>
+        function functionConfirm() {
+            var confirmBox = document.getElementById("confirm");
+
+			confirmBox.style.display = 'block';
+        }
+		
+		function confirmFcn(ans){
+			var confirmBox = document.getElementById("confirm");
+
+			if(ans=='y'){
+				alert('foi YES');
+				confirmBox.style.display = 'none';
+			}else{
+				alert('foi NO');
+				confirmBox.style.display = 'none';
+			}
+		}
+
+      </script>
+</body>
+</html>
